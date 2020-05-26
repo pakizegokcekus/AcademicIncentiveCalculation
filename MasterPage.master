@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+
+
+       <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/simple-sidebar.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+      
+        <div>
+
+  
+             <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+       
+            
+            <div class="bg-secondary border-right" id="sidebar-wrapper">
+                <div class="sidebar-heading text-light">ALANLAR</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action bg-secondary text-white" href="/Home/PageA1">
+                        A1:Eğitim Bilimleri<br />Fen Bilimleri ve Matematik <br />Mühendislik,Sağlık Bilimleri,
+                        Ziraat,Orman ve Su Ürünleri
+                    </a>
+                    <a href="A1.aspx" class="list-group-item list-group-item-action bg-secondary text-white">A2:Filoloji,Hukuk,İlahiyat<br />Sosyal,Beşeri ve İdari Bilimler,Spor Bilimler</a>
+                    <a href="/Home/PageA1" class="list-group-item list-group-item-action bg-secondary text-white">A3:Mimarlık Planlama ve Tasarım</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-secondary text-white">A4:Güzel Sanatlar<br /></a>
+                    <a href="#" class="list-group-item list-group-item-action bg-secondary text-white"></a>
+
+
+
+                </div>
+            </div>
+
+            <!-- /#sidebar-wrapper -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <button class="btn btn-secondary" id="menu-toggle">Alan Menü</button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/Home">Ana Sayfa <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.resmigazete.gov.tr/eskiler/2018/06/20180627-6.pdf">Akademik Teşvik Yönetmeliği</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+                @RenderBody()
+            </div>
+            <!-- /#page-content-wrapper -->
+
+
+</div>
+   
+   
+
+    <!-- /#wrapper -->
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1515 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="A1MasterPage.master.cs" Inherits="A1MasterPage" %>
+
+<%@ Register assembly="DevExpress.Web.Bootstrap.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.Bootstrap" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+    
+    
+
+<head runat="server">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Scripts/umd/simple-sidebar.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+
+    
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+         .auto-style1 {
+             width: 698px;
+         }
+         .auto-style2 {
+             width: 106px;
+         }
+         .auto-style3 {
+             width: 23px;
+         }
+         .auto-style5 {
+             margin-bottom: 0px;
+         }
+         .auto-style6 {
+             height: 27px;
+         }
+         .auto-style7 {
+             height: 26px;
+         }
+         .auto-style8 {
+             width: 172px;
+         }
+         </style>
+</head>
+
+
+
+  
+
+<body>
+    <form id="form1" runat="server">
+
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+        <div>
+
+
+
+
+
+
+          <div class="card">
+    <div class="card-header">
+      <h2 class="mb-0">
+          </h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >
+  Alanınızı ve Unvanınızı Seçiniz!
+</button>
+
+      
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lütfen Alan ve Ünvan Seçiniz</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <h6>Alan:</h6>
+          <dx:ASPxComboBox ID="ComboBoxAlan" runat="server" ValueType="System.String"></dx:ASPxComboBox>
+          <br />
+          <h6>Unvan:</h6>
+
+          <dx:ASPxComboBox ID="ASPxComboBoxUnvan" runat="server" ValueType="System.String"></dx:ASPxComboBox>
+      </div>
+      <div class="modal-footer">
+          <dx:ASPxButton ID="ButonTamam" runat="server" Text="Tamam" OnClick="ButonTamam_Click1"></dx:ASPxButton>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+     
+        <asp:Label ID="LabelUnvan" runat="server"></asp:Label>
+        <asp:Label ID="LabelAlan" runat="server"></asp:Label>
+
+     
+        <br />
+
+     
+    </div>
+   
+  </div>
+
+
+
+
+
+            
+
+            <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Proje(20 puan)</button>
+          <dx:ASPxLabel ID="Labelp3" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelProje" runat="server">
+          </dx:ASPxLabel>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+   
+
+          
+
+ <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col" class="auto-style1">Proje</th>
+      <th scope="col" class="auto-style2">Y/A</th>
+      <th scope="col" class="auto-style3"><dx:ASPxButton ID="TemizleProje" runat="server" OnClick="TemizleProje_Click" Text="Temizle">
+          </dx:ASPxButton>
+          Ekle</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="auto-style">TÜBİTAK 1001, 1003, 3501, 1505, COST, Uluslararası İkili İşbirliği Programları</th>
+
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox37" runat="server" ValueType="System.String" >
+          </dx:ASPxComboBox>
+          <br />
+          </td>
+
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="Ekle1"  runat="server" AutoPostBack="false" OnClick="Ekle1_Click1" Text="Ekle">
+          </dx:BootstrapButton>
+        </td>
+
+     
+
+        
+
+    </tr>
+
+    <tr>
+      <th scope="row" class="auto-style1">TÜBİTAK 1005, 3001</th>
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox38" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          <br />
+         
+          </td>
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="Ekle2" runat="server" AutoPostBack="false" Text="Ekle" OnClick="Ekle2_Click">
+          </dx:BootstrapButton>
+        </td>
+      
+      
+    </tr>
+    <tr>
+      <th scope="row" class="auto-style1">H2020 projesi</th>
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox39" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          <br />
+          </td>
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="Ekle3" runat="server" AutoPostBack="false" Text="Ekle" OnClick="Ekle3_Click">
+          </dx:BootstrapButton>
+        </td>
+    
+       
+    </tr>
+
+       <tr>
+      <th scope="row" class="auto-style1">Diğer uluslararası özel veya resmi kurum ve kuruluşlar tarafından
+          desteklenmiş ve destek süresi dokuz aydan az olmayan Ar-Ge niteliği taşıyan proje</th>
+      <td class="auto-style2">
+          <br />
+          <dx:ASPxComboBox ID="ASPxComboBox40" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+           </td>
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="Ekle4" runat="server" AutoPostBack="false" Text="Ekle" OnClick="Ekle4_Click">
+          </dx:BootstrapButton>
+           </td>
+      
+          
+    </tr>
+
+        <tr>
+      <th scope="row" class="auto-style1">Diğer ulusal kamu veya özel kurum ve kuruluşlar tarafından 
+          desteklenmiş ve destek süresi dokuz aydan az olmayan Ar-Ge niteliği taşıyan proje</th>
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox41" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          <br />
+            </td>
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="Ekle5" runat="server" AutoPostBack="false" Text="Ekle" OnClick="Ekle5_Click">
+          </dx:BootstrapButton>
+            </td>
+    
+           
+    </tr>
+
+       
+
+  </tbody>
+</table>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Araştırma(15 puan)</button>
+          <dx:ASPxLabel ID="ArastırmaAna" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="Label2Proje" runat="server">
+          </dx:ASPxLabel>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        
+
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet</th>
+      <th scope="col">Adet Sayısı</th>
+      <th scope="col">Kişi Sayısı</th>
+      <th scope="col">Süre(Ay)</th>
+      <th scope="col">
+          <dx:ASPxButton ID="TemizleAraştırma" runat="server" Text="Temizle" OnClick="TemizleAraştırma_Click">
+          </dx:ASPxButton>
+          Ekle</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">YURTDIŞI</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" CssClass="auto-style5" Height="16px" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox2" runat="server" Height="16px" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox3" runat="server" Height="16px" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+        <td>
+            <asp:Button ID="BtnEkleA" runat="server" Height="31px" OnClick="BtnEkleA_Click" Text="Ekle" />
+        </td>
+     
+      
+    </tr>
+    <tr>
+      <th scope="row"> YURTİÇİ</th>
+          <td>
+          <dx:ASPxComboBox ID="ASPxComboBox4" runat="server" Height="16px" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox5" runat="server" Height="16px" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox6" runat="server" Height="16px" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+        <td>
+            <asp:Button ID="BtnEkleA2" runat="server" Height="31px" Text="Ekle" OnClick="BtnEkleA2_Click" />
+        </td>
+     
+      
+    </tr>
+    
+  </tbody>
+</table>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="Yayın">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseYayın" aria-expanded="false" aria-controls="collapseThree">
+           Yayın(30 puan)
+        </button>
+          <dx:ASPxLabel ID="LabelYayın2" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelYayın" runat="server">
+          </dx:ASPxLabel>
+      </h2>
+    </div>
+    <div id="collapseYayın" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        
+
+
+
+          <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet</th>
+      <th scope="col">Kaç Tane</th>
+      <th scope="col">Kişi Sayısı/Dergi Puanı</th>
+      <th scope="col">
+          
+          <dx:ASPxButton ID="TemizleYayın" runat="server" OnClick="TemizleYayın_Click" Text="Temizle">
+          </dx:ASPxButton>
+          
+          Ekle</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde yayınlanmış araştırma makalesi</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox7" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox22" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          <dx:ASPxComboBox ID="DergiPuan1" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton8" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton8_Click">
+            </dx:BootstrapButton>
+        </td>
+      
+    </tr>
+
+    <tr>
+      <th scope="row">SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde yayınlanmış derleme veya kısa makale (editöre mektup, yorum, vaka takdimi, teknik not, araştırma notu, özet ve kitap kritiği)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox8" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox23" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          <dx:ASPxComboBox ID="DergiPuan2" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton7" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton7_Click">
+            </dx:BootstrapButton>
+        </td>
+        
+    </tr>
+
+    <tr>
+      <th scope="row">Alan endeksleri (ÜAK tarafından tanımlanan alanlar için) kapsamındaki dergilerde yayınlanmış araştırma makalesi</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox9" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox24" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton3" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton3_Click">
+            </dx:BootstrapButton>
+        </td>
+       
+    </tr>
+
+
+        <tr>
+      <th scope="row">Diğer uluslararası hakemli dergilerde yayınlanmış araştırma makalesi</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox11" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox26" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton5" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton5_Click">
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+        <tr>
+      <th scope="row">ULAKBİM TR Dizin tarafından taranan ulusal hakemli dergilerde yayınlanmış makale</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox12" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox27" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton17" runat="server" AutoPostBack="false" OnClick="BootstrapButton17_Click" Text="Ekle">
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+        <tr>
+      <th >SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde editörlük</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox13" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          &nbsp;</td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton6" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton6_Click">
+            </dx:BootstrapButton>
+            </td>
+        
+    </tr>
+
+        <tr>
+      <th scope="row">Alan endeksleri (ÜAK tarafından tanımlanan alanlar için) kapsamındaki dergilerde editörlük veya editör kurulu üyeliği</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox14" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          &nbsp;</td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton9" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton9_Click">
+            </dx:BootstrapButton>
+            </td>
+        
+    </tr>
+
+        <tr>
+      <th scope="row">Diğer uluslararası hakemli dergilerde editörlük ve editör kurulu üyeliği</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox15" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          &nbsp;</td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton10" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton10_Click">
+            </dx:BootstrapButton>
+            </td>
+        
+    </tr>
+
+        <tr>
+      <th scope="row">ULAKBİM TR Dizin tarafından taranan ulusal hakemli dergilerde editörlük ve editör kurulu üyeliği	
+</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox16" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          &nbsp;</td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton11" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton11_Click">
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+        <tr>
+      <th scope="row">Tanınmış uluslararası yayınevleri tarafından yayımlanmış özgün bilimsel kitap</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox17" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox32" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton12" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton12_Click">
+            </dx:BootstrapButton>
+            </td>
+        
+    </tr>
+
+        <tr>
+      <th scope="row">Tanınmış uluslararası yayınevleri tarafından yayımlanmış özgün bilimsel kitap editörlüğü</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox18" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox33" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton13" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton13_Click">
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+        <tr>
+      <th scope="row">Tanınmış uluslararası yayınevleri tarafından yayımlanmış özgün bilimsel kitaplarda bölüm yazarlığı (Aynı kitapta en çok iki bölüm değerlendirmeye alınır.)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox19" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox34" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton14" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton14_Click">
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+        <tr>
+      <th scope="row">Tanınmış ulusal yayınevleri tarafından yayımlanmış özgün bilimsel kitap</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox20" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox35" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton15" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton15_Click">
+            </dx:BootstrapButton>
+            </td>
+        
+    </tr>
+
+        <tr>
+      <th scope="row">Tanınmış ulusal yayınevleri tarafından yayımlanmış özgün bilimsel kitaplarda bölüm yazarlığı (Aynı kitapta en çok iki bölüm değerlendirmeye alınır.)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox21" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox36" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton16" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BootstrapButton16_Click">
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+
+
+       <tr>
+      <th scope="row">Uluslararası boyutta performansa dayalı yayımlanmış kişisel ses ve/veya görüntü kaydı</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox28" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          &nbsp;</td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton1" runat="server" AutoPostBack="false" Text="Ekle" OnClick="ButtonYayın3_Click" >
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+
+
+       <tr>
+      <th scope="row">Uluslararası boyutta performansa dayalı yayımlanmış karma ses ve/veya görüntü kaydı</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox30" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          &nbsp;</td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton2" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BtnYayın2" >
+            </dx:BootstrapButton>
+            </td>
+       
+    </tr>
+
+
+
+       <tr>
+      <th scope="row">Ulusal boyutta performansa dayalı yayımlanmış kişisel ses ve/veya görüntü kaydı</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox52" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+            </td>
+      <td>
+          &nbsp;</td>
+      <td>
+            <dx:BootstrapButton ID="BootstrapButton25" runat="server" AutoPostBack="false" Text="Ekle" OnClick="ButtonYayın1" >
+            </dx:BootstrapButton>
+            </td>
+        
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+                 <div class="card">
+    <div class="card-header" id="Tasarım">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTasarım" aria-expanded="false" aria-controls="collapseThree">
+         Tasarım(15 puan)
+            </button>
+          <dx:ASPxLabel ID="LabelTasarım1" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelTasarım2" runat="server">
+          </dx:ASPxLabel>
+      </h2>
+    </div>
+    <div id="collapseTasarım" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        
+          <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet</th>
+      <th scope="col">Adet Sayısı</th>
+      <th scope="col">Kişi Sayısı</th>
+      <th scope="col">
+          <dx:ASPxButton ID="TemizleTasarım" runat="server" Text="Temizle" OnClick="TemizleTasarım_Click">
+          </dx:ASPxButton>
+          Ekle</th>
+        
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Endüstriyel, çevresel (bina, peyzaj ve iç mekan) veya grafiksel tasarım; sahne, moda (kumaş, aksesuar veya giysi tasarımı) veya çalgı tasarımı</th>
+      <td>
+          <dx:ASPxComboBox ID="ComboboxTasarım1" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ComboboxTasarım2" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:BootstrapButton ID="ButtonEkleTasarım" runat="server" AutoPostBack="false" Text="Ekle" OnClick="EkleTasarım">
+          </dx:BootstrapButton>
+        </td>
+       
+    </tr>
+    
+   
+  </tbody>
+</table>
+
+      </div>
+    </div>
+  </div>
+
+
+ <div class="card">
+    <div class="card-header" id="Sergi">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSergi" aria-expanded="false" aria-controls="collapseThree">
+          Sergi(15 puan)</button>
+          <dx:ASPxLabel ID="LabelSergi1" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelSergi2" runat="server">
+          </dx:ASPxLabel>
+      </h2>
+    </div>
+    <div id="collapseSergi" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+       
+
+
+          
+ <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col" class="auto-style1">Sergi</th>
+      <th scope="col" class="auto-style2">Adet Sayısı</th>
+      <th scope="col" class="auto-style3">
+          <dx:ASPxButton ID="TemizleSergi" runat="server" Text="Temizle" OnClick="TemizleSergi_Click">
+          </dx:ASPxButton>
+          Ekle</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="auto-style">Özgün yurtdışı bireysel etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve gösterim)</th>
+
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox54" runat="server" ValueType="System.String" >
+          </dx:ASPxComboBox>
+          <br />
+          </td>
+
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="BootstrapButton26"  runat="server" AutoPostBack="false"  Text="Ekle" OnClick="SergiEkle1">
+          </dx:BootstrapButton>
+        </td>
+
+     
+
+
+    </tr>
+
+
+       <tr>
+      <th scope="row" class="auto-style">Özgün yurtiçi bireysel etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve gösterim)</th>
+
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox55" runat="server" ValueType="System.String" >
+          </dx:ASPxComboBox>
+          <br />
+          </td>
+
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="BootstrapButton28"  runat="server" AutoPostBack="false"  Text="Ekle" OnClick="SergiEkle2">
+          </dx:BootstrapButton>
+        </td>
+
+     
+
+       
+
+    </tr>
+
+
+      
+       <tr>
+      <th scope="row" class="auto-style">Özgün yurtdışı grup/karma/toplu etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve gösterim)</th>
+
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox56" runat="server" ValueType="System.String" >
+          </dx:ASPxComboBox>
+          <br />
+          </td>
+
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="BootstrapButton30"  runat="server" AutoPostBack="false"  Text="Ekle" OnClick="SergiEkle3">
+          </dx:BootstrapButton>
+        </td>
+
+     
+
+    </tr>
+
+
+
+      
+       <tr>
+      <th scope="row" class="auto-style">Özgün yurtiçi grup/karma/toplu etkinlik (sergi, bienal, trienal, gösteri, dinleti, festival ve gösterim)</th>
+
+      <td class="auto-style2">
+          <dx:ASPxComboBox ID="ASPxComboBox57" runat="server" ValueType="System.String" >
+          </dx:ASPxComboBox>
+          <br />
+          </td>
+
+      <td class="auto-style3">
+          <dx:BootstrapButton ID="BootstrapButton32"  runat="server" AutoPostBack="false"  Text="Ekle" OnClick="SergiEkle4">
+          </dx:BootstrapButton>
+        </td>
+
+     
+
+      
+
+    </tr>
+
+
+
+
+   
+   
+
+     
+      
+
+      
+
+
+  </tbody>
+</table>
+
+
+      </div>
+    </div>
+  </div>
+
+
+                 <div class="card">
+    <div class="card-header" id="Patent">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsePatent" aria-expanded="false" aria-controls="collapseThree">
+          Patent(30 puan)
+        </button>
+          <dx:ASPxLabel ID="LabelPatent1" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelPatent2" runat="server">
+          </dx:ASPxLabel>
+      </h2>
+    </div>
+    <div id="collapsePatent" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+
+
+        <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet</th>
+      <th scope="col">Adet Sayısı</th>
+      <th scope="col">Kişi Sayısı</th>
+      <th scope="col">
+          <dx:ASPxButton ID="TemizlePatent" runat="server" Text="Temizle" OnClick="TemizlePatent_Click">
+          </dx:ASPxButton>
+          Ekle</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Uluslararası patent</th>
+      <td>
+          <dx:ASPxComboBox ID="ComBoboxPatent1" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ComBoboxPatent2" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:BootstrapButton ID="BtnEklePatent1" runat="server" AutoPostBack="false" OnClick="BtnEklePatent1_Click" Text="Ekle">
+          </dx:BootstrapButton>
+        </td>
+       
+    </tr>
+    <tr>
+      <th scope="row">Ulusal patent</th>
+      <td>
+          <dx:ASPxComboBox ID="ComboBoxPatent3" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ComboboxPatent4" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:BootstrapButton ID="BtnEklePatent2" runat="server" AutoPostBack="false" Text="Ekle" OnClick="BtnEklePatent2_Click">
+          </dx:BootstrapButton>
+        </td>
+       
+    </tr>
+    
+  </tbody>
+</table>
+
+
+      </div>
+    </div>
+  </div>
+
+                 <div class="card">
+    <div class="card-header" id="Atıf">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseAtıf" aria-expanded="false" aria-controls="collapseThree">
+          Atıf(30 puan)
+        </button>
+          <dx:ASPxLabel ID="LabelAtıf" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelAtıf2" runat="server">
+          </dx:ASPxLabel>
+      </h2>
+    </div>
+    <div id="collapseAtıf" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        
+
+          <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet</th>
+      <th scope="col">Adet Sayısı</th>
+      <th scope="col">
+          <dx:ASPxButton ID="TemizleAtıf" runat="server" Text="Temizle" OnClick="TemizleAtıf_Click">
+          </dx:ASPxButton>
+          Ekle</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">SCI, SCI-Expanded, SSCI ve AHCI kapsamındaki dergilerde yayınlanmış makalelerde atıf</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBoxA1" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton1" runat="server" OnClick="ASPxButton1_Click" Text="Ekle">
+          </dx:ASPxButton>
+        </td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Alan endeksleri (varsa) kapsamındaki dergilerde yayınlanmış makalelerde atıf</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBoxA2" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton2" runat="server" OnClick="ASPxButton2_Click" Text="Ekle">
+          </dx:ASPxButton>
+        </td>
+      
+    </tr>
+    <tr>
+      <th scope="row" class="auto-style6">Diğer uluslararası hakemli dergilerde yayınlanmış makalelerde atıf</th>
+      <td class="auto-style6">
+          <dx:ASPxComboBox ID="ASPxComboBoxA3" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td class="auto-style6">
+          <dx:ASPxButton ID="ASPxButton3" runat="server" OnClick="ASPxButton3_Click" Text="Ekle">
+          </dx:ASPxButton>
+        </td>
+     
+    </tr>
+       <tr>
+      <th scope="row">ULAKBİM tarafından taranan ulusal hakemli dergilerde yayınlanmış makalelerde atıf</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBoxA4" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+           </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton4" runat="server" OnClick="ASPxButton4_Click" Text="Ekle">
+          </dx:ASPxButton>
+           </td>
+     
+    </tr>
+    <tr>
+      <th scope="row">Tanınmış uluslararası yayınevleri tarafından yayımlanmış özgün bilimsel kitapta atıf</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBoxA5" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton5" runat="server" OnClick="ASPxButton5_Click" style="height: 23px" Text="Ekle">
+          </dx:ASPxButton>
+        </td>
+     
+    </tr>
+    <tr>
+      <th scope="row">Tanınmış ulusal yayınevleri tarafından yayımlanmış özgün bilimsel kitapta atıf</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBoxA6" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton6" runat="server" OnClick="ASPxButton6_Click" Text="Ekle">
+          </dx:ASPxButton>
+        </td>
+      
+    </tr>
+
+
+       <tr>
+      <th scope="row">Güzel sanatlardaki eserlerin ulrarası kaynak veya yayın organlarında yer alması veya gösterime ya da dinletime girmesi</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox58" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton8" runat="server"  Text="Ekle" OnClick="AtıfEkle2">
+          </dx:ASPxButton>
+        </td>
+     
+    </tr>
+
+
+       <tr>
+      <th scope="row">Güzel sanatlardaki eserlerin ulusal kaynak veya yayın organlarında yer alması veya gösterime ya da dinletime girmesi</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox59" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton9" runat="server"  Text="Ekle" OnClick="AtıfEkle1">
+          </dx:ASPxButton>
+        </td>
+      
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+                 <div class="card">
+    <div class="card-header" id="Tebliğ">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTebliğ" aria-expanded="false" aria-controls="collapseThree">
+          Tebliğ(20 puan)</button>
+          <dx:ASPxLabel ID="LabelTebli1" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelTebli2" runat="server">
+          </dx:ASPxLabel>
+      </h2>
+    </div>
+    <div id="collapseTebliğ" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        
+          <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet</th>
+      <th scope="col">Adet Sayısı</th>
+      <th scope="col">Kişi Sayısı</th>
+      <th scope="col">
+          <dx:ASPxButton ID="TemizleTeblig" runat="server" Text="Temizle" OnClick="TemizleTeblig_Click">
+          </dx:ASPxButton>
+          Ekle</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Hakemli uluslararası bilimsel konferansta, sempozyumda veya kongrede sözlü olarak sunulan ve bunların kitabında yayımlanan tam bildiri</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox43" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox44" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:ASPxButton ID="ASPxButton7" runat="server" OnClick="ASPxButton7_Click" Text="Ekle">
+          </dx:ASPxButton>
+        </td>
+       
+    </tr>
+    
+  </tbody>
+</table>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+                 <div class="card">
+    <div class="card-header" id="Ödül">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseÖdül" aria-expanded="false" aria-controls="collapseThree">
+          Ödül(20 puan)
+        </button>
+          &nbsp;&nbsp;&nbsp;
+          <dx:ASPxLabel ID="LabelOdul" runat="server" Text="0">
+          </dx:ASPxLabel>
+          <dx:ASPxLabel ID="LabelOdul2" runat="server">
+          </dx:ASPxLabel>
+     
+      </h2>
+    </div>
+    <div id="collapseÖdül" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet</th>
+      <th scope="col">Adet Sayısı</th>
+      <th scope="col" class="auto-style8">Kişi Sayısı</th>
+      <th scope="col">
+          <dx:ASPxButton ID="TemizleOdul" runat="server" Text="Temizle" OnClick="TemizleOdul_Click">
+          </dx:ASPxButton>
+          Ekle</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">YÖK Yılın Doktora Tezi Ödülü</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox45" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ComboBoxO" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton18" runat="server" AutoPostBack="false" OnClick="BootstrapButton18_Click" Text="Ekle">
+          </dx:BootstrapButton>
+        </td>
+       
+    </tr>
+    <tr>
+      <th scope="row">TÜBİTAK Bilim Ödülü</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox46" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ComboBoxO0" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton19" runat="server" AutoPostBack="false" OnClick="BootstrapButton19_Click" Text="Ekle">
+          </dx:BootstrapButton>
+        </td>
+       
+    </tr>
+    <tr>
+      <th scope="row">TÜBA Akademi Ödülü</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox47" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ComboBoxO1" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton20" runat="server" AutoPostBack="false" OnClick="BootstrapButton20_Click" Text="Ekle">
+          </dx:BootstrapButton>
+        </td>
+      
+    </tr>
+      
+   
+    <tr>
+      <th scope="row">Yurtdışı kurum veya kuruluşlardan alman bilim ödülü (sürekli olarak verilen, daha önce en az beş kez verilmiş, ilgili kurum veya kuruluşun internet sayfasından duyurulan ve akademik ağırlıklı bir değerlendirme jürisi veya seçici kurulu olan) (Aynı çalışma veya eser nedeniyle alınan farklı ödüller için en fazla bir defa puanlama yapılır.)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox50" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ComboBoxO4" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+        </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton23" runat="server" AutoPostBack="false" OnClick="BootstrapButton23_Click" Text="Ekle">
+          </dx:BootstrapButton>
+        </td>
+       
+    </tr>
+      <tr>
+      <th scope="row">Yurtiçi kurum ve kuruluşlardan alınan bilim ödülü (sürekli olarak verilen, daha önce en az beş kez verilmiş, ilgili kurum veya kuruluşun internet sayfasından duyurulan ve akademik ağırlıklı bir değerlendirme jürisi veya seçici kurulu olan) (Aynı çalışma veya eser nedeniyle alınan farklı ödüller için en fazla bir defa puanlama yapılır.)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox51" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ComboBoxO5" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton24" runat="server" AutoPostBack="false" OnClick="BootstrapButton24_Click" Text="Ekle">
+          </dx:BootstrapButton>
+          </td>
+       
+    </tr>
+
+
+
+       <tr>
+      <th scope="row">Uluslararası jürili sürekli düzenlenen güzel sanat etkinliklerinde veya yarışmalarında eserlere verilen uluslararası derece ödülü (mansiyon hariç) (Aynı çalışma veya eser nedeniyle alınan farklı ödüller için en fazla bir defa puanlama yapılır.)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox60" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ASPxComboBox61" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton34" runat="server" AutoPostBack="false"  Text="Ekle" OnClick="OdulEkle3">
+          </dx:BootstrapButton>
+          </td>
+        
+    </tr>
+
+
+
+       <tr>
+      <th scope="row">Ulusal jürili sürekli düzenlenen güzel sanat etkinliklerinde veya yarışmalarında eserlere verilen uluslararası derece ödülü (mansiyon hariç) (Aynı çalışma veya eser nedeniyle alınan farklı ödüller için en fazla bir defa puanlama yapılır.)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox62" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ASPxComboBox63" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton35" runat="server" AutoPostBack="false"  Text="Ekle" OnClick="OdulEkle2">
+          </dx:BootstrapButton>
+          </td>
+       
+    </tr>
+
+
+       <tr>
+      <th scope="row">Mevzuatı çerçevesinde, ilgili kuruluşlar (bakanlıklar, yerel yönetimler, meslek odaları, uluslararası kuruluşlar) tarafından sürekli düzenlenen, planlama, mimarlık, kentsel tasarım, peyzaj tasarımı, iç mimari tasarım, endüstri ürünleri tasarımı ve mimarlık temel alanındaki diğer yarışmalarda derece ödülü (mansiyon hariç) (Aynı çalışma veya eser nedeniyle alınan farklı ödüller için en fazla bir defa puanlama yapılır.)</th>
+      <td>
+          <dx:ASPxComboBox ID="ASPxComboBox64" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td class="auto-style8">
+          <dx:ASPxComboBox ID="ASPxComboBox65" runat="server" ValueType="System.String">
+          </dx:ASPxComboBox>
+          </td>
+      <td>
+          <dx:BootstrapButton ID="BootstrapButton36" runat="server" AutoPostBack="false"  Text="Ekle" OnClick="OdulEkle1">
+          </dx:BootstrapButton>
+          </td>
+       
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </div>
+  </div>
+
+
+
+                 <div class="card">
+    <div class="card-header" id="heading">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapseTwo">
+          HESAPLA
+        </button>
+      </h2>
+    </div>
+    <div id="collapse" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        
+          <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Faaliyet Türü</th>
+      <th scope="col">Ham Puanınız</th>
+      <th scope="col">Limitli Puanınız</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1) Proje (Limit: 20)</th>
+      <td>
+          <asp:Label ID="Label1" runat="server" Text="0"></asp:Label>
+        </td>
+      <td>
+          <asp:Label ID="Label2" runat="server" Text="0"></asp:Label>
+        </td>
+      
+    </tr>
+    <tr>
+      <th scope="row">2) Araştırma (Limit: 15)</th>
+      <td>
+          <asp:Label ID="Label3" runat="server" Text="0"></asp:Label>
+        </td>
+      <td>
+          <asp:Label ID="Label4" runat="server" Text="0"></asp:Label>
+        </td>
+      
+    </tr>
+    <tr>
+      <th scope="row" class="auto-style7">3) Yayın (Limit: 30)</th>
+      <td class="auto-style7">
+          <asp:Label ID="Label5" runat="server" Text="0"></asp:Label>
+        </td>
+      <td class="auto-style7">
+          <asp:Label ID="Label6" runat="server" Text="0"></asp:Label>
+        </td>
+      
+    </tr>
+      <tr>
+      <th scope="row">4) Tasarım (Limit: 15)</th>
+      <td>
+          <asp:Label ID="Label7" runat="server" Text="0"></asp:Label>
+          </td>
+      <td>
+          <asp:Label ID="Label8" runat="server" Text="0"></asp:Label>
+          </td>
+     
+    </tr>
+      <tr>
+      <th scope="row">5) Sergi (Limit: 15)</th>
+      <td>
+          <asp:Label ID="Label9" runat="server" Text="0"></asp:Label>
+          </td>
+      <td>
+          <asp:Label ID="Label10" runat="server" Text="0"></asp:Label>
+          </td>
+     
+    </tr>
+      <tr>
+      <th scope="row">6) Patent (Limit: 30)</th>
+      <td>
+          <asp:Label ID="Label11" runat="server" Text="0"></asp:Label>
+          </td>
+      <td>
+          <asp:Label ID="Label12" runat="server" Text="0"></asp:Label>
+          </td>
+      
+    </tr>
+      <tr>
+      <th scope="row">7) Atıf (Limit: 30)</th>
+      <td>
+          <asp:Label ID="Label13" runat="server" Text="0"></asp:Label>
+          </td>
+      <td>
+          <asp:Label ID="Label14" runat="server" Text="0"></asp:Label>
+          </td>
+      
+    </tr>
+      <tr>
+      <th scope="row">8) Tebliğ (Limit: 20)</th>
+      <td>
+          <asp:Label ID="Label15" runat="server" Text="0"></asp:Label>
+          </td>
+      <td>
+          <asp:Label ID="Label16" runat="server" Text="0"></asp:Label>
+          </td>
+     
+    </tr>
+      <tr>
+      <th scope="row">9) Ödül (Limit: 20)</th>
+      <td>
+          <asp:Label ID="Label17" runat="server" Text="0"></asp:Label>
+          </td>
+      <td>
+          <asp:Label ID="Label18" runat="server" Text="0"></asp:Label>
+          </td>
+      
+    </tr>
+      <tr>
+      <th scope="row">TOPLAM</th>
+      <td>
+          <asp:Label ID="Label19" runat="server" Text="0"></asp:Label>
+          </td>
+      <td>
+          <asp:Label ID="Label20" runat="server" Text="0"></asp:Label>
+          </td>
+      
+    </tr>
+      <tr>
+      <th scope="row">Teşvik Puanınız</th>
+      <td colspan="2">
+          <asp:Label ID="LabelTesvikp" runat="server">0</asp:Label>
+          </td>
+      
+      
+    </tr>
+      <tr>
+      <th scTeşvik Miktarı</th>
+      <td colspan="2">
+          <asp:Label ID="LabelTesvikm" runat="server" Text="0"></asp:Label>
+          </td>
+      
+      
+    </tr>
+   
+  </tbody>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+            
+           
+
+
+
+
+        </div>
+   
+
+           
+
+
+
+
+
+
+     
+   
+
+           
+
+
+
+
+
+
+        <asp:Button ID="Btn_Hesapla" runat="server" OnClick="Btn_Hesapla_Click" Text="Hesapla" BackColor="Blue" Height="53px" Width="590px" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Hepsini Temizle" BackColor="Blue" Height="53px" Width="719px" />
+   
+
+           
+
+
+
+
+
+
+     
+   
+
+           
+
+
+
+
+
+
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
